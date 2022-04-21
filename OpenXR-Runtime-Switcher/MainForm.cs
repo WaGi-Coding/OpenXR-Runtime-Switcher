@@ -225,7 +225,7 @@ namespace OpenXR_Runtime_Switcher
 
         private void WebsiteStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/WaGi-Coding/OpenXR-Runtime-Switcher/releases");
+            Process.Start("https://wagi-coding.github.io/OpenXR-Runtime-Switcher");
         }
 
         private void button5_Click(object sender, EventArgs e)
