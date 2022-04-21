@@ -189,11 +189,9 @@
     <None Include="Resources\Oculus.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\NoLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="icon.ico" />
     <Content Include="ILMergeOrder.txt" />
+    <None Include="Resources\NoLogo.png" />
     <None Include="Resources\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
