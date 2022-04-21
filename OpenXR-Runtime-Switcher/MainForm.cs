@@ -331,6 +331,7 @@ namespace OpenXR_Runtime_Switcher
         {
             timerSplash.Enabled = false;
             this.Controls.Remove(panelSplash);
+            CheckForUpdate(false);
         }
 
         private void checkForUpdateToolStripMenuItem_Click(object sender, EventArgs e)
