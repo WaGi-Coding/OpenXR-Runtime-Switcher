@@ -273,7 +273,7 @@ namespace OpenXR_Runtime_Switcher
         {
             CheckForUpdate(true);
         }
-        public async void CheckForUpdate(bool showError)
+        public async void CheckForUpdate(bool showInfoMessages)
         {
             try
             {
@@ -298,20 +298,30 @@ namespace OpenXR_Runtime_Switcher
 
                         bool needUpdate = ver.CompareTo(appVer) > 0;
 
-                        if (MessageBox.Show($"There is an Update available!\n\n\nNew Version: {ver}\n\nYour Version: {appVer}\n\n\nDo you want to visit the Download Page?", "Update available!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (needUpdate)
                         {
-                            Process.Start("https://github.com/WaGi-Coding/OpenXR-Runtime-Switcher/releases/latest");
+                            if (MessageBox.Show($"There is an Update available!\n\n\nNew Version: {ver}\n\nYour Version: {appVer}\n\n\nDo you want to visit the Download Page?", "Update available!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                Process.Start("https://github.com/WaGi-Coding/OpenXR-Runtime-Switcher/releases/latest");
+                            }
+                            else
+                            {
+                                return;
+                            }
                         }
                         else
                         {
-                            return;
+                            if (showInfoMessages)
+                            {
+                                MessageBox.Show("You are using the newest Version!\n\nNo Update needed...");
+                            }
                         }
                     }
                 }
             }
             catch (Exception)
             {
-                if (showError)
+                if (showInfoMessages)
                 {
                     MessageBox.Show("Error when checking for Update!");
                 }
