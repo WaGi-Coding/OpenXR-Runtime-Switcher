@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <img src="https://i.imgur.com/iHKCJT4.png">
+</p>
+
+<p align="center">
   Allows you to quickly switch your System Default OpenXR Runtime between existing ones (currently SteamVR, Oculus/Meta, ViveVR, Windows Mixed Reality & Varjo) if installed & custom ones, which you can add manually to the program.
 </p>
 
