@@ -5,8 +5,9 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/WaGi-Coding/OpenXR-Runtime-Switcher?style=social)
 
 
-[![Download](https://i.imgur.com/IMSXFnA.png)](https://github.com/WaGi-Coding/OpenXR-Runtime-Switcher/releases/)
-
+<p align="center">
+  <a href="https://github.com/WaGi-Coding/OpenXR-Runtime-Switcher/releases/"><img alt="Download" src="https://i.imgur.com/IMSXFnA.png"/></a>
+</p>
 
 
 <p align="center">
