@@ -136,66 +136,6 @@ namespace OpenXR_Runtime_Switcher
 
             RefreshPanels();
 
-
-
-
-            //if (rtm != null)
-            //{
-            //    //rtm.Refresh();
-            //    flowLayoutPanel1.Controls.Clear();
-            //    UCControls = new List<RuntimeEntryControl>();
-
-            //    foreach (RuntimeEntryControl REC in rtm.GetEntryList())
-            //    {
-            //        UCControls.Add(REC);
-            //    }
-
-            //    foreach (RuntimeEntryControl REC in UCControls)
-            //    {
-            //        flowLayoutPanel1.Controls.Add(REC);
-            //    }
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            //MessageBox.Show(rtm.CustomRuntimes[0].JsonPath);
-
-            //CustomRuntimeSaveListEntry ce = new CustomRuntimeSaveListEntry();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                RuntimeManager.TrySetActiveRuntimeJsonPath(rtm.FoundRuntimes.Where(runtime => runtime.Name == "SteamVR").Select(runtime => runtime.JsonPath).ToList()[0]);
-            }
-            catch (UnauthorizedAccessException)
-            {
-                MessageBox.Show("You need to run this Program as Administrator, in order to set a Runtime!");
-                return;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error when attempting to edit the Registry:\n" + ex.Message);
-            }
-        }
-        private void button4_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                RuntimeManager.TrySetActiveRuntimeJsonPath(rtm.FoundRuntimes.Where(runtime => runtime.Name == "Oculus").Select(runtime => runtime.JsonPath).ToList()[0]);
-            }
-            catch (UnauthorizedAccessException)
-            {
-                MessageBox.Show("You need to run this Program as Administrator, in order to set a Runtime!");
-                return;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error when attempting to edit the Registry:\n" + ex.Message);
-            }
         }
 
         public bool SamePaths(string p1, string p2)
@@ -206,7 +146,6 @@ namespace OpenXR_Runtime_Switcher
             {
                 path1 = FirstLetterToUpperCaseOrConvertNullToEmptyString(p1);
                 path2 = FirstLetterToUpperCaseOrConvertNullToEmptyString(p2);
-                //MessageBox.Show("XXXXXXXXXXXXXXXX\n" + path1 + "\n" + path2 + "\nXXXXXXXXXXXXXXXX");
             }
 
             if (path1 == path2)
@@ -276,16 +215,12 @@ namespace OpenXR_Runtime_Switcher
 
                 if (result == DialogResult.OK)
                 {
-                    //MessageBox.Show("OK From Add Custom Runtime Form");
-                    //List<CustomRuntimeSaveListEntry> tmpList = JsonConvert.DeserializeObject<List<CustomRuntimeSaveListEntry>>(Properties.Settings.Default.CustomRuntimes);
                     customRuntimeSaveListEntries.Add(addCustomFrm.EntryToAdd);
                     Properties.Settings.Default.CustomRuntimes = JsonConvert.SerializeObject(customRuntimeSaveListEntries);
                     Properties.Settings.Default.Save();
                     RefreshPanels();
                 }
             }
-
-            
         }
 
         private void WebsiteStripMenuItem_Click(object sender, EventArgs e)
@@ -371,9 +306,6 @@ namespace OpenXR_Runtime_Switcher
                         {
                             return;
                         }
-                        //MessageBox.Show(needUpdate.ToString());
-
-
                     }
                 }
             }
@@ -383,7 +315,6 @@ namespace OpenXR_Runtime_Switcher
                 {
                     MessageBox.Show("Error when checking for Update!");
                 }
-
                 // Ignore any errors on update check for the "on start update check"
             }
 

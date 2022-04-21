@@ -17,7 +17,6 @@ namespace OpenXR_Runtime_Switcher
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
-            //Application.Run(new Form_AddCustomRuntime(new MainForm()));
         }
     }
 }

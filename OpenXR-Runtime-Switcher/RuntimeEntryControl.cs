@@ -178,7 +178,6 @@ namespace OpenXR_Runtime_Switcher
                 Cursor.Current = Cursors.Default;
             }
         }
-
         private void RuntimeEntryControl_MouseLeave(object sender, EventArgs e)
         {
             if (isCustom)
@@ -212,14 +211,11 @@ namespace OpenXR_Runtime_Switcher
 
                     mainForm.RefreshPanels();
                     //mainForm.flowLayoutPanelCustoms.Controls.Remove(this);
-
                 }
                 else
                 {
                     MessageBox.Show("Error:\nCannot Remove!");
                 }
-
-
             }
 
         }
