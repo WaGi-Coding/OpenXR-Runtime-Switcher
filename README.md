@@ -1,4 +1,4 @@
-# Taki7o7's OpenXR Runtime-Switcher
+# OpenXR Runtime-Switcher
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/WaGi-Coding/OpenXR-Runtime-Switcher?label=latest%20release&style=for-the-badge)
 ![GitHub all releases](https://img.shields.io/github/downloads/WaGi-Coding/OpenXR-Runtime-Switcher/total?label=Github%20Release%20Downloads&style=for-the-badge)
 
