@@ -122,22 +122,6 @@ namespace OpenXR_Runtime_Switcher
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.Reload();
-            var xxx = JsonConvert.DeserializeObject<List<CustomRuntimeSaveListEntry>>(Properties.Settings.Default.CustomRuntimes); ;
-
-            var yyy = new CustomRuntimeSaveListEntry($"Test {customRuntimeSaveListEntries.Count + 1}", @"C:\TestPath\test.json", @"C:\Users\Taki\Pictures\crowlchling.png");
-
-            xxx.Add(yyy);
-
-            Properties.Settings.Default.CustomRuntimes = JsonConvert.SerializeObject(xxx);
-            Properties.Settings.Default.Save();
-
-            RefreshPanels();
-
-        }
-
         public bool SamePaths(string p1, string p2)
         {
             string path1 = p1;
