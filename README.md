@@ -49,3 +49,4 @@
 - The program does not check the validity of a runtimes json file!
 - This program only changes the SYSTEM DEFAULT OpenXR Runtime, a Game could internally pick/require a/the non System Default one manually!
 - The program needs administrator rights, in order to set the runtime registry key!
+- Normally, it should automatically request Admin Rights. I've heard thats not the case for some people, most likely on Windows 11. Make sure it runs as administrator, otherwise you cannot actually switch the runtime (needs permission to edit the registry key for that)
